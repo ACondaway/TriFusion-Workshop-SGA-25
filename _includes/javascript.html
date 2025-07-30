@@ -1,0 +1,106 @@
+{% comment %}
+  JavaScript used in lesson and workshop pages.
+{% endcomment %}
+<script src="{{ relative_root_path }}/assets/js/jquery.min.js"></script>
+<script src="{{ relative_root_path }}/assets/js/bootstrap.min.js"></script>
+<script src="{{ relative_root_path }}/assets/js/lesson.js"></script>
+
+<script>
+/* Based on https://stackoverflow.com/a/30894829/1802726 */
+var show_instructions = function() {
+     //set all nav tabs to inactive
+    $('#outer-tabs li').removeClass('active');
+
+    //get all nav tabs matching the os and set to active
+    $('#outer-tabs li a[data-os="'+localStorage.os+'"]').parent().addClass('active');
+
+    //set all tabs to inactive
+    $('.os-tabs li[role="presentation"]').removeClass('active');
+
+    //get all tabs matching the os and set to active
+    $('.os-tabs li a[data-os="'+localStorage.os+'"]').tab('show');
+}
+
+if (typeof(Storage) !== "undefined") {
+    if (localStorage.os == "undefined") {
+        localStorage.os = "windows";
+    }
+    show_instructions();
+} else {
+    console.log("No localStorage");
+}
+
+/* Based on https://stackoverflow.com/a/30894829/1802726 */
+$('.os-tabs li a').click(function(){
+    //get selected os
+    localStorage.os = $(this)[0].dataset.os;
+
+    //show clicked tab content
+    $(this).tab('show');
+
+    //update other tabs
+    show_instructions();
+});
+
+$('.os-switch').click(function() {
+    soft_sel = $(this)[0].dataset.software;
+
+    //show clicked tab content
+    $('#win-tabs li a[data-software="'+soft_sel+'"]').tab('show');
+});
+
+  // hide alerts when site is rendered on carpentries.github.io
+  $(document).ready(function() {
+      if (location.href.startsWith("https://carpentries.github.io/workshop-template/")) {
+          $("div.alert").hide();
+      }
+  });
+</script>
+{% if site.kind == "lesson" %}
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setDomains", ["*.lessons.carpentries.org","*.datacarpentry.github.io","*.datacarpentry.org","*.librarycarpentry.github.io","*.librarycarpentry.org","*.swcarpentry.github.io"]]);
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://carpentries.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='//cdn.matomo.cloud/carpentries.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+{% endif %}
+
+{% if page.math %}
+<script src="{{ relative_root_path }}/assets/js/katex.min.js"></script>
+<script>
+options={
+  delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "$", right: "$", display: false},
+    {left: "\\(", right: "\\)", display: false},
+    {left: "\\[", right: "\\]", display: true}
+  ],
+  output: "mathml"
+}
+</script>
+<script src="{{ relative_root_path }}/assets/js/katex-auto-render.min.js" onload="renderMathInElement(document.body, options)"></script>
+{% endif %}
+
+{%- comment -%}
+AnchorJS: A JavaScript utility for adding deep anchor links
+https://github.com/bryanbraun/anchorjs
+https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js
+{%- endcomment -%}
+
+<script src="{{ relative_root_path }}/assets/js/anchor.min.js"></script>
+<script>
+    anchors.add();
+</script>
