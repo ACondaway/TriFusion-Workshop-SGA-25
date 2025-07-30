@@ -1,0 +1,207 @@
+---
+---
+
+// TriFusion Workshop Custom Styles
+// Embodied Intelligence Theme Colors
+
+//----------------------------------------
+// TriFusion Brand Colors
+//----------------------------------------
+
+// Primary brand colors inspired by fusion and intelligence
+$color-trifusion-primary: #2E86AB !default;    // Deep blue for intelligence
+$color-trifusion-secondary: #A23B72 !default;  // Purple for avatars
+$color-trifusion-accent: #F18F01 !default;     // Orange for robotics
+$color-trifusion-human: #C73E1D !default;      // Red for humans
+
+// Gradient backgrounds for sections
+$color-gradient-1: linear-gradient(135deg, #2E86AB, #A23B72);
+$color-gradient-2: linear-gradient(135deg, #A23B72, #F18F01);
+$color-gradient-3: linear-gradient(135deg, #F18F01, #C73E1D);
+
+//----------------------------------------
+// Custom Workshop Styling
+//----------------------------------------
+
+.workshop-header {
+  background: $color-gradient-1;
+  color: white;
+  padding: 2em 0;
+  text-align: center;
+  margin-bottom: 2em;
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+  }
+}
+
+// Emoji styling for the three domains
+.domain-emoji {
+  font-size: 1.5em;
+  margin: 0 0.5em;
+  
+  &.human { color: $color-trifusion-human; }
+  &.avatar { color: $color-trifusion-secondary; }
+  &.robot { color: $color-trifusion-accent; }
+}
+
+// Custom panels for speakers
+.speaker-panel {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  .panel-heading {
+    background: $color-gradient-1;
+    color: white;
+    border: none;
+    
+    h4 {
+      margin: 0;
+      font-weight: bold;
+    }
+    
+    small {
+      opacity: 0.8;
+    }
+  }
+}
+
+// Research focus areas styling
+.research-focus {
+  .col-md-4 {
+    margin-bottom: 2em;
+    
+    h4 {
+      color: $color-trifusion-primary;
+      border-bottom: 2px solid $color-trifusion-accent;
+      padding-bottom: 0.5em;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      
+      li {
+        padding: 0.5em 0;
+        border-left: 3px solid $color-trifusion-secondary;
+        padding-left: 1em;
+        margin-bottom: 0.5em;
+        background: rgba(46, 134, 171, 0.05);
+      }
+    }
+  }
+}
+
+// Schedule table styling
+.schedule-table {
+  th {
+    background: $color-gradient-1;
+    color: white;
+    border: none;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background: rgba(46, 134, 171, 0.05);
+  }
+  
+  tbody tr:hover {
+    background: rgba(46, 134, 171, 0.1);
+  }
+  
+  .keynote {
+    font-weight: bold;
+    color: $color-trifusion-primary;
+  }
+  
+  .session-title {
+    color: $color-trifusion-secondary;
+    font-weight: bold;
+  }
+}
+
+// Activity panels
+.activity-panel {
+  border-left: 4px solid $color-trifusion-accent;
+  background: rgba(241, 143, 1, 0.05);
+  
+  .panel-heading {
+    background: rgba(241, 143, 1, 0.1);
+    border: none;
+    
+    h5 {
+      color: $color-trifusion-accent;
+      font-weight: bold;
+    }
+  }
+}
+
+// Organizer sections
+.organizer-section {
+  .row {
+    margin-bottom: 1em;
+  }
+  
+  strong {
+    color: $color-trifusion-primary;
+    font-size: 1.1em;
+  }
+  
+  em {
+    color: $color-trifusion-secondary;
+  }
+}
+
+// Custom button styling
+.btn-trifusion {
+  background: $color-gradient-1;
+  border: none;
+  color: white;
+  padding: 0.8em 2em;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: $color-gradient-2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+}
+
+// Page sections
+.section {
+  padding: 3em 0;
+  
+  &.alt-bg {
+    background: rgba(46, 134, 171, 0.02);
+  }
+}
+
+// Footer customization
+.workshop-footer {
+  background: $color-gradient-1;
+  color: white;
+  padding: 2em 0;
+  margin-top: 3em;
+  
+  a {
+    color: rgba(255,255,255,0.8);
+    
+    &:hover {
+      color: white;
+    }
+  }
+} 

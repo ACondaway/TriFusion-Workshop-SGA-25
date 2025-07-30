@@ -3,22 +3,22 @@ layout: workshop      # DON'T CHANGE THIS.
 # More detailed instructions (including how to fill these variables for an
 # online workshop) are available at
 # https://carpentries.github.io/workshop-template/customization/index.html
-venue: "FIXME"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
-latitude: "45"        # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "-1"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["instructor one", "instructor two"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["helper one", "helper two"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["first@example.org","second@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
+venue: "SIGGRAPH Asia 2025"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
+address: "TBD (Conference Venue)"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
+country: "cn"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
+latitude: "35.6762"        # decimal latitude of workshop venue (use https://www.latlong.net/)
+longitude: "139.6503"       # decimal longitude of the workshop venue (use https://www.latlong.net)
+humandate: "Dec 8, 2025"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "9:00 am - 5:00 pm JST"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
+startdate: 2025-12-08      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2025-12-08        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Ping Luo (HKU)", "Xiaokang Yang (SJTU)", "Yao Mu (SJTU)", "Yichao Yan (SJTU)", "Ailing Zeng (Anuttacon)", "Jingbo Wang (Shanghai AI Lab)"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Liang Xu (SJTU/EIT)", "Congsheng Xu (SJTU)", "Tengjie Zhu (SJTU)", "Kaixuan Wang (HKU)"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+email: ["trifusion2025@gmail.com"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+collaborative_notes: "https://pad.carpentries.org/trifusion-siggraph-asia-2025"  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
-what3words:           # optional: what3words (https://what3words.com) address of the workshop venue, without leading slashes e.g. "globe.lessening.computers"
+
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -34,16 +34,7 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 
 
 
-{% comment %}
-8< ============= For a workshop delete from here =============
-For a workshop please delete the following block until the next dashed-line
-{% endcomment %}
 
-
-
-{% comment %}
-8< ============================= until here ==================
-{% endcomment %}
 
 {% comment %}
 Check DC curriculum
@@ -92,6 +83,16 @@ displayed if the 'eventbrite' field in the header is not set.
 </script>
 {% endif %}
 
+
+<div class="workshop-header">
+  <h1>TriFusion Workshop@SIGGRAPH Asia 2025</h1>
+  <div class="subtitle">
+    Towards Embodied Intelligence Across 
+    <span class="domain-emoji human">Humans 😐</span>, 
+    <span class="domain-emoji avatar">Avatars 🫥</span>, and 
+    <span class="domain-emoji robot">Humanoid Robotics 🤖</span>
+  </div>
+</div>
 
 <h2 id="general">General Information</h2>
 
@@ -402,16 +403,7 @@ of code below the Schedule `<h2>` header below with
 
 <h2 id="schedule">Schedule</h2>
 
-{% if site.carpentry == "swc" %}
-{% include swc/schedule.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/schedule.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/schedule.html %}
-{% elsif site.carpentry == "incubator" %}
-This workshop is teaching a lesson in 
-<a href="https://carpentries-incubator.org/">The Carpentries Incubator</a>. Please check <a href="{{site.incubator_lesson_site}}">the lesson homepage</a> for a list of lesson sections and estimated timings.
-{% endif %}
+{% include trifusion-schedule.html %}
 
 {% comment %}
 Edit/replace the text above if you want to include a schedule table.
@@ -425,6 +417,145 @@ The lesson taught in this workshop is being piloted and a precise schedule is ye
 
 <hr/>
 
+<h2 id="speakers">Invited Speakers & Organizers</h2>
+
+<div class="row">
+  <div class="col-md-12">
+    <h3>Keynote Speakers</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h4>Jingyi Yu</h4>
+        <small>ShanghaiTech University</small>
+      </div>
+      <div class="panel-body">
+        <p>Expert in computer vision, computational photography, and virtual/augmented reality. Bridging the gap between virtual and physical worlds through innovative visual computing technologies.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h4>Ziwei Liu</h4>
+        <small>Nanyang Technological University</small>
+      </div>
+      <div class="panel-body">
+        <p>Leading researcher in computer vision and machine learning, with focus on human-centric AI, 3D scene understanding, and advanced avatar technologies.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h4>Jiajun Wu</h4>
+        <small>Stanford University</small>
+      </div>
+      <div class="panel-body">
+        <p>Pioneer in embodied AI and robotics, focusing on the intersection of computer vision, machine learning, and robotics for intelligent agents.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h3>Workshop Organizers</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 organizer-section">
+    <h4>Senior Organizers</h4>
+    <div class="row">
+      <div class="col-md-6">
+        <strong>Ping Luo</strong><br/>
+        <em>The University of Hong Kong</em>
+      </div>
+      <div class="col-md-6">
+        <strong>Xiaokang Yang</strong><br/>
+        <em>Shanghai Jiao Tong University</em>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <strong>Yao Mu</strong><br/>
+        <em>Shanghai Jiao Tong University</em>
+      </div>
+      <div class="col-md-6">
+        <strong>Yichao Yan</strong><br/>
+        <em>Shanghai Jiao Tong University</em>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <strong>Ailing Zeng</strong><br/>
+        <em>Anuttacon</em>
+      </div>
+      <div class="col-md-6">
+        <strong>Jingbo Wang</strong><br/>
+        <em>Shanghai AI Lab</em>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+    <h4>Student Leaders</h4>
+    <div class="row">
+      <div class="col-md-6">
+        <strong>Liang Xu</strong><br/>
+        <em>SJTU/EIT</em>
+      </div>
+      <div class="col-md-6">
+        <strong>Congsheng Xu</strong><br/>
+        <em>Shanghai Jiao Tong University</em>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <strong>Tengjie Zhu</strong><br/>
+        <em>Shanghai Jiao Tong University</em>
+      </div>
+      <div class="col-md-6">
+        <strong>Kaixuan Wang</strong><br/>
+        <em>The University of Hong Kong</em>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <h4>Program Committee</h4>
+    <div class="row">
+      <div class="col-md-2">
+        <strong>Yitian Liu</strong><br/>
+        <small>SJTU</small>
+      </div>
+      <div class="col-md-2">
+        <strong>Yuzhang Li</strong><br/>
+        <small>TJU</small>
+      </div>
+      <div class="col-md-2">
+        <strong>Yibin Liu</strong><br/>
+        <small>NEU</small>
+      </div>
+      <div class="col-md-2">
+        <strong>Yuhao Zhang</strong><br/>
+        <small>SJTU</small>
+      </div>
+      <div class="col-md-2">
+        <strong>Wanxi Dong</strong><br/>
+        <small>SUSTech</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr/>
 
 {% comment %}
 SETUP
