@@ -30,17 +30,17 @@
         </div>
         <div class="col-md-6">
           <p>
-          <strong>Instructors:</strong>
-          {% if page.instructor %}
-          {{page.instructor | join: ', ' %}}
+          <strong>Organizers:</strong>
+          {% if page.organizers %}
+          {{page.organizers | join: ', ' %}}
           {% else %}
           to be announced.
           {% endif %}
           </p>
-          {% if page.helper %}
+          {% if page.student_leaders %}
           <p>
-          <strong>Helpers:</strong>
-          {{page.helper | join: ', ' %}}
+          <strong>Student Leaders:</strong>
+          {{page.student_leaders | join: ', ' %}}
           </p>
           {% endif %}
         </div>
