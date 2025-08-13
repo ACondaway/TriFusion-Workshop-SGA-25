@@ -16,6 +16,14 @@ The **TriFusion Workshop** aims to catalyze interdisciplinary dialogue and innov
 
 This workshop investigates the shared principles and enabling technologies that support the seamless transfer of perception, cognition, and motor skills across **Humans 😐**, **Avatars 🫥**, and **Humanoid Robotics 🤖**.
 
+We welcome submissions in the following areas:
+- Motion capture, tracking, and retargeting
+- Data-driven and physics-based human motion generation
+- Neural rendering and photorealistic avatar animation
+- Cross-embodiment learning and sim-to-real transfer
+- Digital twins for embodied cognition
+- Collaborative and co-adaptive embodied systems
+
 ## Topics of Interest
 
 We invite submissions that explore, but are not limited to, the following research areas:

@@ -15,7 +15,7 @@ startdate: 2025-12-08      # machine-readable start date for the workshop in YYY
 enddate: 2025-12-08        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 organizers: ["Ping Luo (HKU)", "Xiaokang Yang (SJTU)", "Yao Mu (SJTU)", "Yichao Yan (SJTU)", "Ailing Zeng (Anuttacon)", "Jingbo Wang (Shanghai AI Lab)"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 student_leaders: ["Liang Xu (SJTU/EIT)", "Congsheng Xu (SJTU)", "Tengjie Zhu (SJTU)", "Kaixuan Wang (HKU)"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["acondaway@sjtu.edu.cn"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+email: ["trifusion2025@outlook.com"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes: "https://pad.carpentries.org/trifusion-siggraph-asia-2025"  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 
@@ -140,6 +140,26 @@ displayed if the 'eventbrite' field in the header is not set.
   {% for email in page.email %}
             <a href="mailto:{{email}}">{{email}}</a>
   {% endfor %}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 id="mission">Workshop Mission</h2>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <p class="lead text-center">
+          TriFusion explores how computer graphics can drive the next generation of embodied intelligence, bridging the sim-to-real gap between humans, avatars, and humanoid robots.
+        </p>
+        <p>
+          As virtual characters and physical agents increasingly share tasks and environments, this workshop spotlights the graphics-driven foundations of seamless motion transfer, real-time retargeting, and physically based animation. Topics include cross-domain sensorimotor learning, digital twins for simulation and evaluation, and unifying visual, biomechanical, and neural models for believable, adaptive motion across both virtual and real embodiments.
+        </p>
+        <p>
+          By connecting the graphics, animation, and robotics communities, TriFusion aims to establish shared tools, representations, and benchmarks for scalable, human-aligned embodied intelligence.
         </p>
       </div>
     </div>

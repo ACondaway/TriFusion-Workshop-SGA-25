@@ -12,7 +12,11 @@ title: "TriFusion Challenge"
 
 ## Challenge Overview
 
-The TriFusion Challenge is a series of technical competitions designed to advance the state-of-the-art in embodied intelligence across humans, avatars, and humanoid robotics. We invite researchers and practitioners to participate in cutting-edge challenges that explore the boundaries of cross-domain intelligence transfer.
+The TriFusion Challenge addresses two core sim-to-real problems at the convergence of computer graphics and robotics: universal motion tracking for full-scale humanoids, and visuo-tactile simulation optimization for dexterous manipulation. 
+
+Track 1 focuses on high-fidelity motion retargeting from human performance to simulated humanoids, evaluated on precise positional and DOF tracking metrics. 
+
+Track 2 targets improving the realism and accuracy of visuo-tactile rendering and physical modeling in peg-in-hole tasks using RoboTwin and GelSight Mini data.
 
 ## Competition Tracks
 
@@ -20,25 +24,25 @@ The TriFusion Challenge is a series of technical competitions designed to advanc
   <div class="col-md-6">
     <div class="panel panel-default activity-panel">
       <div class="panel-heading">
-        <h3>🤖 Avatar-to-Robot Transfer</h3>
+        <h3>🎯 Track 1: Universal Motion Tracking</h3>
       </div>
       <div class="panel-body">
-        <p><strong>Objective:</strong> Develop methods to transfer skills learned in virtual avatar environments to physical humanoid robots.</p>
+        <p><strong>Objective:</strong> High-fidelity motion retargeting from human performance to simulated humanoids with precise tracking evaluation.</p>
         
         <p><strong>Key Tasks:</strong></p>
         <ul>
-          <li>Virtual-to-real domain adaptation</li>
-          <li>Physics simulation bridging</li>
-          <li>Motor skill transfer</li>
-          <li>Real-time performance evaluation</li>
+          <li>Full-scale humanoid motion capture</li>
+          <li>Real-time motion retargeting</li>
+          <li>DOF (Degrees of Freedom) optimization</li>
+          <li>Cross-morphology adaptation</li>
         </ul>
         
         <p><strong>Evaluation Metrics:</strong></p>
         <ul>
-          <li>Task completion accuracy</li>
-          <li>Transfer efficiency</li>
-          <li>Generalization capability</li>
-          <li>Real-world robustness</li>
+          <li>Positional tracking accuracy</li>
+          <li>DOF tracking precision</li>
+          <li>Motion fidelity scores</li>
+          <li>Temporal consistency</li>
         </ul>
       </div>
     </div>
@@ -47,86 +51,32 @@ The TriFusion Challenge is a series of technical competitions designed to advanc
   <div class="col-md-6">
     <div class="panel panel-default activity-panel">
       <div class="panel-heading">
-        <h3>⚡ Real-time Embodiment</h3>
+        <h3>🔬 Track 2: Visuo-Tactile Simulation</h3>
       </div>
       <div class="panel-body">
-        <p><strong>Objective:</strong> Create systems that enable real-time synchronization between human actions and avatar/robot responses.</p>
+        <p><strong>Objective:</strong> Improve realism and accuracy of visuo-tactile rendering and physical modeling for dexterous manipulation tasks.</p>
         
         <p><strong>Key Tasks:</strong></p>
         <ul>
-          <li>Low-latency motion capture</li>
-          <li>Real-time motion synthesis</li>
-          <li>Cross-modal adaptation</li>
-          <li>Temporal consistency</li>
+          <li>Peg-in-hole task optimization</li>
+          <li>RoboTwin data integration</li>
+          <li>GelSight Mini sensor modeling</li>
+          <li>Haptic feedback simulation</li>
         </ul>
         
         <p><strong>Evaluation Metrics:</strong></p>
         <ul>
-          <li>End-to-end latency</li>
-          <li>Motion fidelity</li>
-          <li>Stability under noise</li>
-          <li>Computational efficiency</li>
+          <li>Tactile rendering accuracy</li>
+          <li>Physical model fidelity</li>
+          <li>Task completion rates</li>
+          <li>Sim-to-real transfer success</li>
         </ul>
       </div>
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-6">
-    <div class="panel panel-default activity-panel">
-      <div class="panel-heading">
-        <h3>🔄 Multi-Modal Interaction</h3>
-      </div>
-      <div class="panel-body">
-        <p><strong>Objective:</strong> Design intelligent systems that can seamlessly interact across visual, auditory, and haptic modalities.</p>
-        
-        <p><strong>Key Tasks:</strong></p>
-        <ul>
-          <li>Cross-modal understanding</li>
-          <li>Fusion of sensory inputs</li>
-          <li>Context-aware responses</li>
-          <li>Adaptive interaction strategies</li>
-        </ul>
-        
-        <p><strong>Evaluation Metrics:</strong></p>
-        <ul>
-          <li>Multi-modal coherence</li>
-          <li>Context understanding</li>
-          <li>Response appropriateness</li>
-          <li>User experience quality</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="panel panel-default activity-panel">
-      <div class="panel-heading">
-        <h3>🧠 Cognitive Skill Transfer</h3>
-      </div>
-      <div class="panel-body">
-        <p><strong>Objective:</strong> Develop algorithms that can transfer high-level cognitive skills between different embodied agents.</p>
-        
-        <p><strong>Key Tasks:</strong></p>
-        <ul>
-          <li>Abstract skill representation</li>
-          <li>Cross-agent knowledge transfer</li>
-          <li>Hierarchical learning</li>
-          <li>Meta-learning approaches</li>
-        </ul>
-        
-        <p><strong>Evaluation Metrics:</strong></p>
-        <ul>
-          <li>Learning efficiency</li>
-          <li>Skill generalization</li>
-          <li>Knowledge retention</li>
-          <li>Adaptation speed</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 ## Challenge Timeline
 
