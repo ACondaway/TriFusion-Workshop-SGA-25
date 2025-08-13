@@ -3,12 +3,12 @@ layout: page
 title: "Call for Papers"
 ---
 
-<div class="workshop-header">
+<!-- <div class="workshop-header">
   <h1>Call for Papers</h1>
   <div class="subtitle">
     TriFusion Workshop@SIGGRAPH Asia 2025
   </div>
-</div>
+</div> -->
 
 ## Workshop Theme
 

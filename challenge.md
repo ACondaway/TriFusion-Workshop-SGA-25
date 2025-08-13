@@ -3,12 +3,12 @@ layout: page
 title: "TriFusion Challenge"
 ---
 
-<div class="workshop-header">
+<!-- <div class="workshop-header">
   <h1>TriFusion Challenge</h1>
   <div class="subtitle">
     Technical Competitions in Embodied Intelligence
   </div>
-</div>
+</div> -->
 
 ## Challenge Overview
 
