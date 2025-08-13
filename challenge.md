@@ -145,7 +145,7 @@ Track 2 targets improving the realism and accuracy of visuo-tactile rendering an
       <div class="panel-body">
         <h3>🏆 Track Winners</h3>
         <h4>$2,000 USD each</h4>
-        <p>Best solution in each of the four competition tracks (Avatar-to-Robot, Real-time, Multi-Modal, Cognitive).</p>
+        <p>Best solution in each of the two competition tracks (Universal Motion Tracking, Visuo-Tactile Simulation).</p>
       </div>
     </div>
   </div>
