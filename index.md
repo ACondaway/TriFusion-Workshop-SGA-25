@@ -1,24 +1,17 @@
 ---
-layout: workshop      # DON'T CHANGE THIS.
-# More detailed instructions (including how to fill these variables for an
-# online workshop) are available at
-# https://carpentries.github.io/workshop-template/customization/index.html
-venue: "SIGGRAPH Asia 2025"        # brief name of the institution that hosts the workshop without address (e.g., "Euphoric State University")
-address: "TBD (Conference Venue)"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria"), videoconferencing URL, or 'online'
-country: "cn"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) for the institution that hosts the workshop
-language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for the workshop
-latitude: "35.6762"        # decimal latitude of workshop venue (use https://www.latlong.net/)
-longitude: "139.6503"       # decimal longitude of the workshop venue (use https://www.latlong.net)
-humandate: "Dec 8, 2025"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "9:00 am - 5:00 pm JST"    # human-readable times for the workshop e.g., "9:00 am - 4:30 pm CEST (7:00 am - 2:30 pm UTC)"
-startdate: 2025-12-08      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2025-12-08        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Ping Luo (HKU)", "Xiaokang Yang (SJTU)", "Yao Mu (SJTU)", "Yichao Yan (SJTU)", "Ailing Zeng (Anuttacon)", "Jingbo Wang (Shanghai AI Lab)"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Liang Xu (SJTU/EIT)", "Congsheng Xu (SJTU)", "Tengjie Zhu (SJTU)", "Kaixuan Wang (HKU)"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["trifusion2025@gmail.com"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes: "https://pad.carpentries.org/trifusion-siggraph-asia-2025"  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
-eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
-
+layout: workshop
+title: "TriFusion Workshop@SIGGRAPH Asia 2025"
+venue: "SIGGRAPH Asia 2025"
+address: "TBD (Conference Venue)"
+country: "jp"
+language: "en"
+latitude: "35.6762"
+longitude: "139.6503"
+humandate: "Dec 8, 2025"
+humantime: "9:00 am - 5:00 pm JST"
+startdate: 2025-12-08
+enddate: 2025-12-08
+email: ["trifusion2025@gmail.com"]
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -94,529 +87,154 @@ displayed if the 'eventbrite' field in the header is not set.
   </div>
 </div>
 
-<h2 id="general">General Information</h2>
-
-{% comment %}
-INTRODUCTION
-
-Edit the general explanatory paragraph below if you want to change
-the pitch.
-{% endcomment %}
-
-<p>
-<strong><a href="https://carpentries.org">The Carpentries</a></strong> project comprises the <a
-href="{{site.swc_site}}">Software Carpentry</a>, <a href="{{site.dc_site}}">Data Carpentry</a>, and
-<a href="{{site.lc_site}}">Library Carpentry</a> communities of Instructors, Trainers, Maintainers,
-helpers, and supporters who share a mission to teach foundational computational and data science
-skills to researchers.
-<p align="center">
-  <em>
-  <strong>Want to learn more and stay engaged with The Carpentries?</strong> Carpentries Clippings is The Carpentries' biweekly newsletter, where we share community news, community job postings, and more.
-Sign up to receive future editions and read our full archive: <a href="https://carpentries.org/newsletter/">https://carpentries.org/newsletter/</a>
-  </em>
-</p>
-{% if site.carpentry == "swc" %}
-{% include swc/intro.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/intro.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/intro.html %}
-{% endif %}
-
-{% if site.pilot %}
-This is a pilot workshop, testing out a lesson that is still under development. The lesson authors would appreciate any feedback you can give them about the lesson content and suggestions for how it could be further improved.
-{% endif %}
-
-{% comment %}
-AUDIENCE
-
-Explain who your audience is.  (In particular, tell readers if the
-workshop is only open to people from a particular institution.
-{% endcomment %}
-{% if site.carpentry == "swc" %}
-{% include swc/who.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/who.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/who.html %}
-{% endif %}
-
-{% comment %}
-LOCATION
-
-This block displays the address and links to maps showing directions
-if the latitude and longitude of the workshop have been set.  You
-can use https://www.latlong.net/ to find the lat/long of an
-address.
-{% endcomment %}
-{% assign begin_address = page.address | slice: 0, 4 | downcase  %}
-{% if page.address == "online" %}
-{% assign online = "true_private" %}
-{% elsif begin_address contains "http" %}
-{% assign online = "true_public" %}
-{% else %}
-{% assign online = "false" %}
-{% endif %}
-{% if page.latitude and page.longitude and online == "false" %}
-<p id="where">
-  <strong>Where:</strong>
-  {{page.address}}.
-  Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{page.latitude}}&mlon={{page.longitude}}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{page.latitude}},{{page.longitude}}">Google Maps</a>.
-  {% if page.what3words %}
-    What3Words location:
-    <a href="https://what3words.com/{{page.what3words}}">///{{page.what3words}}</a>.
-  {%endif %}
-</p>
-{% elsif online == "true_public" %}
-<p id="where">
-  <strong>Where:</strong>
-  online at <a href="{{page.address}}">{{page.address}}</a>.
-  If you need a password or other information to access the training,
-  the instructor will pass it on to you before the workshop.
-</p>
-{% elsif online == "true_private" %}
-<p id="where">
-  <strong>Where:</strong> This training will take place online.
-  The instructors will provide you with the information you will need to connect to this meeting.
-</p>
-{% endif %}
-
-{% comment %}
-DATE
-
-This block displays the date and links to Google Calendar.
-{% endcomment %}
-{% if page.humandate %}
-<p id="when">
-  <strong>When:</strong>
-  {{page.humandate}}; {{page.humantime}}
-  {% include workshop_calendar.html %}
-</p>
-{% endif %}
-
-{% comment %}
-SPECIAL REQUIREMENTS
-
-Modify the block below if there are any special requirements.
-{% endcomment %}
-<p id="requirements">
-  <strong>Requirements:</strong>
-  {% if online == "false" %}
-    Participants must bring a laptop with a
-    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
-  {% else %}
-    Participants must have access to a computer with a
-    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
-  {% endif %}
-  They should have a few specific software packages installed (listed <a href="#setup">below</a>).
-</p>
-
-{% comment %}
-ACCESSIBILITY
-
-Modify the block below if there are any barriers to accessibility or
-special instructions.
-{% endcomment %}
-<p id="accessibility">
-  <strong>Accessibility:</strong>
-  We are committed to making this workshop
-  accessible to everybody. 
-{% if online == "false" %}
-  The workshop organizers have checked that:
-<p>
-  <ul>
-    <li>The room is wheelchair / scooter accessible.</li>
-    <li>Accessible restrooms are available.</li>
-  </ul>
-{% endif %}
-</p>
-<p>We are dedicated to providing a positive and accessible learning environment for all. 
-  We do not require participants to provide documentation of disabilities or disclose any unnecessary personal information. 
-  However, we do want to help create an inclusive, accessible experience for all participants. 
-  We encourage you to share any information that would be helpful to make your Carpentries experience accessible.
-  To request an accommodation for this workshop, please fill out the 
-  <a href="https://carpentries.typeform.com/to/B2OSYaD0">accommodation request form</a>.
-  If you have questions or need assistance with the accommodation form please <a href="mailto:team@carpentries.org">email us</a>.
-</p>
-<p>
-  <a href="https://glosario.carpentries.org/">Glosario</a> is a multilingual glossary 
-  for computing and data science terms. The glossary helps 
-  learners attend workshops and use our lessons to make sense of computational and programming jargon written in English by offering it 
-  in their native language. Translating data science terms also provides a teaching tool for Carpentries Instructors to reduce barriers 
-  for their learners.
-</p>
-
-{% comment %}
-WORKSHOP RECORDINGS
-
-Modify or remove the block below if you plan to record the workshop.
-{% endcomment %}
-<p id="recordings">
-  <strong>Workshop Recordings:</strong>
-  Carpentries workshops are designed to be interactive rather than lecture-based, with lessons that build upon one another.
-  To foster a positive online learning environment, we strongly recommend that participants join in real time.
-  As a result, workshop recordings are not recommended and may not be available to learners.
-</p>
-{% comment %}
-CONTACT EMAIL ADDRESS
-
-Display the contact email address set in the configuration file.
-{% endcomment %}
-<p id="contact">
-  <strong>Contact:</strong>
-  Please email
-  {% if page.email %}
-  {% for email in page.email %}
-  {% if forloop.last and page.email.size > 1 %}
-  or
-  {% else %}
-  {% unless forloop.first %}
-  ,
-  {% endunless %}
-  {% endif %}
-  <a href='mailto:{{email}}'>{{email}}</a>
-  {% endfor %}
-  {% else %}
-  to-be-announced
-  {% endif %}
-  for more information.
-</p>
-
-<p id="roles">
-  <strong>Roles:</strong>
-  To learn more about the roles at the workshop (who will be doing what),
-  refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">our Workshop FAQ</a>.
-</p>
-
-{% comment %}
-WHO CAN ATTEND?
-
-If you would like to specify who can attend the workshop,
-you can use the section below.
-
-Move the 'endcomment' tag above the beginning of the following
-<p> tag to make this section visible.
-
-Edit the text to match who can attend the workshop. For instance:
-- This workshop is open to affiliates to ABC university.
-- This workshop is open to the public.
-- If you are interested in attending this workshop, contact me@example.com
-  for more information
-
-<p id="who-can-attend">
-    <strong>Who can attend?:</strong>
-    This workshop is open to ....
-</p>
-{% endcomment %}
-
-<hr/>
-
-{% comment%}
-CODE OF CONDUCT
-{% endcomment %}
-<h2 id="code-of-conduct">Code of Conduct</h2>
-
-<p>
-Everyone who participates in Carpentries activities is required to conform to the <a href="https://docs.carpentries.org/policies/coc/">Code of Conduct</a>. This document also outlines how to report an incident if needed.
-</p>
-
-<p class="text-center">
-  <a href="https://goo.gl/forms/KoUfO53Za3apOuOK2">
-    <button type="button" class="btn btn-info">Report a Code of Conduct Incident</button>
-  </a>
-</p>
-<hr/>
-
-
-{% comment %}
-Collaborative Notes
-
-If you want to use an Etherpad, go to
-
-https://pad.carpentries.org/YYYY-MM-DD-site
-
-where 'YYYY-MM-DD-site' is the identifier for your workshop,
-e.g., '2015-06-10-esu'.
-
-Note we also have a CodiMD (the open-source version of HackMD)
-available at https://codimd.carpentries.org
-{% endcomment %}
-{% if page.collaborative_notes %}
-<h2 id="collaborative_notes">Collaborative Notes</h2>
-
-<p>
-We will use this <a href="{{ page.collaborative_notes }}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
-</p>
-<hr/>
-{% endif %}
-
-
-{% comment %}
-SURVEYS - DO NOT EDIT SURVEY LINKS
-{% endcomment %}
-<h2 id="surveys">Surveys</h2>
-<p>Please be sure to complete these surveys before and after the workshop.</p>
-{% if site.carpentry == "incubator" %}
-<p><a href="{{ site.incubator_pre_survey }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.incubator_post_survey }}">Post-workshop Survey</a></p>
-{% elsif site.incubator_pre_survey or site.incubator_post_survey %}
-<div class="alert alert-danger">
-WARNING: you have defined custom pre- and/or post-survey links for
-a workshop not configured for The Carpentries Incubator
-(the value of `curriculum` is not set to `incubator` in `_config.yml`).
-Please comment out the `incubator_pre_survey` and `incubator_post_survey` fields
-in `_config.yml` or, if this workshop is teaching a lesson in the Incubator,
-change the value of `carpentry` to `incubator`.
-</div>
-{% else %}
-<p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-{% endif %}
-
-<hr/>
-
-
-{% comment %}
-SCHEDULE
-
-Show the workshop's schedule.
-
-Small changes to the schedule can be made by modifying the
-`schedule.html` found in the `_includes` folder for your
-workshop type (`swc`, `lc`, or `dc`). Edit the items and
-times in the table to match your plans. You may also want to
-change 'Day 1' and 'Day 2' to be actual dates or days of the
-week.
-
-For larger changes, a blank template for a 4-day workshop
-(useful for online teaching for instance) can be found in
-`_includes/custom-schedule.html`. Add the times, and what
-you will be teaching to this file. You may also want to add
-rows to the table if you wish to break down the schedule
-further. To use this custom schedule here, replace the block
-of code below the Schedule `<h2>` header below with
-`{% include custom-schedule.html %}`.
-{% endcomment %}
-
-<h2 id="schedule">Schedule</h2>
-
-{% include trifusion-schedule.html %}
-
-{% comment %}
-Edit/replace the text above if you want to include a schedule table.
-See the contents of the _includes/custom-schedule.html file for an example of
-how one of these schedule tables is constructed.
-{% endcomment %}
-
-{% if site.pilot %}
-The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. Please <a href="mailto:{{page.email}}">contact the workshop organisers</a> if you would like more information about the planned schedule.
-{% endif %}
-
-<hr/>
-
-<h2 id="speakers">Invited Speakers & Organizers</h2>
+<h2 id="about">About the Workshop</h2>
 
 <div class="row">
-  <div class="col-md-12">
-    <h3>Keynote Speakers</h3>
+  <div class="col-md-8">
+    <p class="lead">
+      TriFusion Workshop explores the fascinating intersection of computer graphics, artificial intelligence, robotics, and cognitive science, focusing on the seamless transfer of intelligence across different embodied forms.
+    </p>
+    
+    <p>
+      As digital avatars and humanoid robots increasingly serve as proxies and collaborators in both virtual and physical environments, there is a growing need to understand and develop embodied intelligence that can fluidly span these domains. This workshop investigates the shared principles and enabling technologies that support the seamless transfer of perception, cognition, and motor skills across human users, digital surrogates, and robotic agents.
+    </p>
+    
+    <h3>Key Research Areas</h3>
+    <div class="row research-focus">
+      <div class="col-md-6">
+        <ul>
+          <li>Embodied Intelligence</li>
+          <li>Human-Avatar Interaction</li>
+          <li>Humanoid Robotics</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <ul>
+          <li>Cross-Domain Transfer Learning</li>
+          <li>Multi-Modal Perception</li>
+          <li>Cognitive Skill Transfer</li>
+  </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Workshop Details</h3>
+      </div>
+      <div class="panel-body">
+        <p><strong>Date:</strong> {{page.humandate}}</p>
+        <p><strong>Time:</strong> {{page.humantime}}</p>
+        <p><strong>Venue:</strong> {{page.venue}}</p>
+        <p><strong>Location:</strong> {{page.address}}</p>
+        <p><strong>Contact:</strong> 
+  {% for email in page.email %}
+            <a href="mailto:{{email}}">{{email}}</a>
+  {% endfor %}
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 
+<h2 id="schedule">Schedule & Activities</h2>
+
+<div class="row">
+  <div class="col-md-12">
+<p class="text-center">
+      <em>A comprehensive full-day exploration of embodied intelligence across humans, avatars, and humanoid robotics</em>
+    </p>
+  </div>
+</div>
+
+{% include trifusion-schedule.html %}
+
+<hr/>
+
+<h2 id="people">Speakers & Organizers</h2>
+
+<h3>Keynote Speakers</h3>
 <div class="row">
   <div class="col-md-4">
-    <div class="panel panel-info">
+    <div class="panel panel-info speaker-panel">
       <div class="panel-heading">
         <h4>Jingyi Yu</h4>
         <small>ShanghaiTech University</small>
       </div>
       <div class="panel-body">
-        <p>Expert in computer vision, computational photography, and virtual/augmented reality. Bridging the gap between virtual and physical worlds through innovative visual computing technologies.</p>
+        <p>Expert in computer vision, computational photography, and virtual/augmented reality technologies.</p>
       </div>
     </div>
   </div>
   <div class="col-md-4">
-    <div class="panel panel-info">
+    <div class="panel panel-info speaker-panel">
       <div class="panel-heading">
         <h4>Ziwei Liu</h4>
         <small>Nanyang Technological University</small>
       </div>
       <div class="panel-body">
-        <p>Leading researcher in computer vision and machine learning, with focus on human-centric AI, 3D scene understanding, and advanced avatar technologies.</p>
+        <p>Leading researcher in computer vision, human-centric AI, and advanced avatar technologies.</p>
       </div>
     </div>
   </div>
   <div class="col-md-4">
-    <div class="panel panel-info">
+    <div class="panel panel-info speaker-panel">
       <div class="panel-heading">
         <h4>Jiajun Wu</h4>
         <small>Stanford University</small>
       </div>
       <div class="panel-body">
-        <p>Pioneer in embodied AI and robotics, focusing on the intersection of computer vision, machine learning, and robotics for intelligent agents.</p>
+        <p>Pioneer in embodied AI and robotics, focusing on intelligent agents and embodied learning.</p>
       </div>
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-12">
-    <h3>Workshop Organizers</h3>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6 organizer-section">
+<h3>Organizers</h3>
+<div class="row organizer-section">
+  <div class="col-md-6">
     <h4>Senior Organizers</h4>
-    <div class="row">
-      <div class="col-md-6">
-        <strong>Ping Luo</strong><br/>
-        <em>The University of Hong Kong</em>
-      </div>
-      <div class="col-md-6">
-        <strong>Xiaokang Yang</strong><br/>
-        <em>Shanghai Jiao Tong University</em>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <strong>Yao Mu</strong><br/>
-        <em>Shanghai Jiao Tong University</em>
-      </div>
-      <div class="col-md-6">
-        <strong>Yichao Yan</strong><br/>
-        <em>Shanghai Jiao Tong University</em>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <strong>Ailing Zeng</strong><br/>
-        <em>Anuttacon</em>
-      </div>
-      <div class="col-md-6">
-        <strong>Jingbo Wang</strong><br/>
-        <em>Shanghai AI Lab</em>
-      </div>
-    </div>
+    <ul class="list-unstyled">
+      <li><strong>Ping Luo</strong> - The University of Hong Kong</li>
+      <li><strong>Xiaokang Yang</strong> - Shanghai Jiao Tong University</li>
+      <li><strong>Yao Mu</strong> - Shanghai Jiao Tong University</li>
+      <li><strong>Yichao Yan</strong> - Shanghai Jiao Tong University</li>
+      <li><strong>Ailing Zeng</strong> - Anuttacon</li>
+      <li><strong>Jingbo Wang</strong> - Shanghai AI Lab</li>
+    </ul>
   </div>
   
   <div class="col-md-6">
     <h4>Student Leaders</h4>
-    <div class="row">
-      <div class="col-md-6">
-        <strong>Liang Xu</strong><br/>
-        <em>SJTU/EIT</em>
-      </div>
-      <div class="col-md-6">
-        <strong>Congsheng Xu</strong><br/>
-        <em>Shanghai Jiao Tong University</em>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <strong>Tengjie Zhu</strong><br/>
-        <em>Shanghai Jiao Tong University</em>
-      </div>
-      <div class="col-md-6">
-        <strong>Kaixuan Wang</strong><br/>
-        <em>The University of Hong Kong</em>
-      </div>
-    </div>
+    <ul class="list-unstyled">
+      <li><strong>Liang Xu</strong> - SJTU/EIT</li>
+      <li><strong>Congsheng Xu</strong> - Shanghai Jiao Tong University</li>
+      <li><strong>Tengjie Zhu</strong> - Shanghai Jiao Tong University</li>
+      <li><strong>Kaixuan Wang</strong> - The University of Hong Kong</li>
+    </ul>
+    
+    <h4>Program Committee</h4>
+    <p><small>
+      Yitian Liu (SJTU), Yuzhang Li (TJU), Yibin Liu (NEU), 
+      Yuhao Zhang (SJTU), Wanxi Dong (SUSTech)
+    </small></p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <h4>Program Committee</h4>
-    <div class="row">
-      <div class="col-md-2">
-        <strong>Yitian Liu</strong><br/>
-        <small>SJTU</small>
-      </div>
-      <div class="col-md-2">
-        <strong>Yuzhang Li</strong><br/>
-        <small>TJU</small>
-      </div>
-      <div class="col-md-2">
-        <strong>Yibin Liu</strong><br/>
-        <small>NEU</small>
-      </div>
-      <div class="col-md-2">
-        <strong>Yuhao Zhang</strong><br/>
-        <small>SJTU</small>
-      </div>
-      <div class="col-md-2">
-        <strong>Wanxi Dong</strong><br/>
-        <small>SUSTech</small>
+    <div class="panel panel-default">
+      <div class="panel-body text-center">
+        <h4>Join Our Community</h4>
+        <p>Connect with researchers, practitioners, and enthusiasts working on embodied intelligence.</p>
+        <p>
+          <strong>Contact:</strong> 
+          {% for email in page.email %}
+            <a href="mailto:{{email}}" class="btn btn-primary">{{email}}</a>
+          {% endfor %}
+        </p>
       </div>
     </div>
   </div>
 </div>
-
-<hr/>
-
-{% comment %}
-SETUP
-
-Delete irrelevant sections from the setup instructions.  Each
-section is inside a 'div' without any classes to make the beginning
-and end easier to find.
-
-This is the other place where people frequently make mistakes, so
-please preview your site before committing, and make sure to run
-'tools/check' as well.
-{% endcomment %}
-
-<h2 id="setup">Setup</h2>
-
-<p>
-  To participate in a
-  {% if site.carpentry == "swc" %}
-  Software Carpentry
-  {% elsif site.carpentry == "dc" %}
-  Data Carpentry
-  {% elsif site.carpentry == "lc" %}
-  Library Carpentry
-  {% endif %}
-  workshop,
-  you will need access to software as described below.
-  In addition, you will need an up-to-date web browser.
-</p>
-<p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
-</p>
-
-{% comment %}
-For online workshops, the section below provides:
-- installation instructions for the Zoom client
-- recommendations for setting up Learners' workspace so they can follow along
-  the instructions and the videoconferencing
-
-If you do not use Zoom for your online workshop, edit the file
-`_includes/install_instructions/videoconferencing.html`
-to include the relevant installation instructions.
-{% endcomment %}
-{% if online != "false" %}
-{% include install_instructions/videoconferencing.html %}
-{% endif %}
-
-{% comment %}
-These are the installation instructions for the tools used
-during the workshop.
-{% endcomment %}
-
-{% if site.carpentry == "swc" %}
-{% include swc/setup.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/setup.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/setup.html %}
-{% elsif site.carpentry == "incubator" %}
-Please check the "Setup" page of
-<a href="{{site.incubator_lesson_site}}">the lesson homepage</a> for instructions to follow
-to obtain the software and data you will need to follow the lesson.
-{% endif %}

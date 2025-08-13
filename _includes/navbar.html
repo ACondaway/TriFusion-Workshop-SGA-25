@@ -47,56 +47,13 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-
-	{% comment %} Always show code of conduct. {% endcomment %}
+        
+        {% comment %} TriFusion Workshop Navigation {% endcomment %}
+        <li><a href="{{ relative_root_path }}{% link challenge.md %}">Challenge</a></li>
+        <li><a href="{{ relative_root_path }}{% link call-for-papers.md %}">Call for Papers</a></li>
+        
+        {% comment %} Always show code of conduct. {% endcomment %}
         <li><a href="{{ relative_root_path }}{% link CODE_OF_CONDUCT.md %}">Code of Conduct</a></li>
-
-        {% if site.kind == "lesson" %}
-	{% comment %} Show setup instructions. {% endcomment %}
-        <li><a href="{{ relative_root_path }}{% link setup.md %}">Setup</a></li>
-
-        {% comment %} Show lesson episodes for lessons. {% endcomment %}
-        {% if lesson_episodes.size > 0 %}
-        <li class="dropdown">
-          <a href="{{ relative_root_path }}/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            {% for lesson_episode in lesson_episodes %}
-            {% if site.episode_order %}
-              {% assign episode = site.episodes | where: "slug", lesson_episode | first %}
-            {% else %}
-              {% assign episode = lesson_episode %}
-            {% endif %}
-            <li><a href="{{ relative_root_path }}{{ episode.url }}">{{ episode.title }}</a></li>
-            {% endfor %}
-	    <li role="separator" class="divider"></li>
-            <li><a href="{{ relative_root_path }}{% link aio.md %}">All in one page (Beta)</a></li>
-          </ul>
-        </li>
-        {% endif %}
-	{% endif %}
-
-	{% comment %} Show extras for lessons or if this is the main workshop-template repo (where they contain documentation). {% endcomment %}
-	{% if site.kind == "lesson" %}
-        <li class="dropdown">
-          <a href="{{ relative_root_path }}/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="{{ relative_root_path }}{% link reference.md %}">Reference</a></li>
-            {% for lesson_extra in lesson_extras %}
-            {% if site.extras_order %}
-              {% assign extra = site.extras | where: "slug", lesson_extra | first %}
-            {% else %}
-              {% assign extra = lesson_extra %}
-            {% endif %}
-            {% unless extra.exclude %}
-              <li><a href="{{ relative_root_path }}{{ extra.url }}">{{ extra.title }}</a></li>
-            {% endunless %}
-            {% endfor %}
-          </ul>
-        </li>
-	{% endif %}
-
-	{% comment %} Always show license. {% endcomment %}
-        <li><a href="{{ relative_root_path }}{% link LICENSE.md %}">License</a></li>
         {% if site.life_cycle == 'transition-step-1' %}
         <li><a href="{{repo_url}}">Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
         {% elsif page.source == "Rmd" %}
