@@ -12,9 +12,11 @@ title: "Call for Papers"
 
 ## Workshop Theme
 
-The **TriFusion Workshop** aims to catalyze interdisciplinary dialogue and innovation at the intersection of computer graphics, artificial intelligence, robotics, and cognitive science. As digital avatars and humanoid robots increasingly act as proxies and collaborators in both virtual and physical environments, there is a growing need to understand and develop embodied intelligence that can fluidly span these domains.
+**TriFusion: Towards Embodied Intelligence Across Humans, Avatars, and Humanoid Robotics** aims to catalyze interdisciplinary dialogue and innovation at the intersection of computer graphics, artificial intelligence, robotics, and cognitive science. As digital avatars and humanoid robots increasingly act as proxies and collaborators in both virtual and physical environments, bridging the simulation-to-reality (sim-to-real) gap becomes a critical challenge for achieving believable, reliable, and adaptive embodied behaviors.
 
 This workshop investigates the shared principles and enabling technologies that support the seamless transfer of perception, cognition, and motor skills across **Humans 😐**, **Avatars 🫥**, and **Humanoid Robotics 🤖**.
+
+Key topics include sensorimotor learning across simulated and real embodiments, physically based and data-driven motion synthesis, neural and biomechanical modeling for animation and control, real-time avatar retargeting, cross-domain telepresence, and the integration of digital twins as testbeds for embodied cognition. By uniting researchers and practitioners from graphics, animation, and robotics, TriFusion seeks to establish foundational frameworks for unified embodiment, advance collaborative simulation platforms, and chart a research agenda that supports scalable, adaptive, and human-aligned intelligence across both real and synthetic agents.
 
 ## Topics of Interest
 
