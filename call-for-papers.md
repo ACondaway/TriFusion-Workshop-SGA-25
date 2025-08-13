@@ -281,8 +281,8 @@ Our distinguished program committee consists of leading researchers from academi
     <ul>
       <li>Prof. Ping Luo (The University of Hong Kong)</li>
       <li>Prof. Xiaokang Yang (Shanghai Jiao Tong University)</li>
-      <li>Dr. Yao Mu (Shanghai Jiao Tong University)</li>
-      <li>Dr. Yichao Yan (Shanghai Jiao Tong University)</li>
+      <li>Prof. Yao Mu (Shanghai Jiao Tong University)</li>
+      <li>Prof. Yichao Yan (Shanghai Jiao Tong University)</li>
       <li>Dr. Ailing Zeng (Anuttacon)</li>
       <li>Dr. Jingbo Wang (Shanghai AI Lab)</li>
     </ul>
@@ -291,11 +291,11 @@ Our distinguished program committee consists of leading researchers from academi
   <div class="col-md-6">
     <h4>PC Members</h4>
     <ul>
-      <li>Dr. Yitian Liu (Shanghai Jiao Tong University)</li>
-      <li>Dr. Yuzhang Li (Tianjin University)</li>
-      <li>Dr. Yibin Liu (Northeastern University)</li>
-      <li>Dr. Yuhao Zhang (Shanghai Jiao Tong University)</li>
-      <li>Dr. Wanxi Dong (SUSTech)</li>
+      <li>Yitian Liu (Shanghai Jiao Tong University)</li>
+      <li>Yuzhang Li (Tongji University)</li>
+      <li>Yibin Liu (Northeastern University)</li>
+      <li>Yuhao Zhang (Shanghai Jiao Tong University)</li>
+      <li>Wanxi Dong (SUSTech)</li>
       <li><em>+ Additional members to be announced</em></li>
     </ul>
   </div>
