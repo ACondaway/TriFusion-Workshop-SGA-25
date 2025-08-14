@@ -84,16 +84,6 @@ displayed if the 'eventbrite' field in the header is not set.
 {% endif %}
 
 
-<div class="workshop-header">
-  <h1>TriFusion Workshop@SIGGRAPH Asia 2025</h1>
-  <div class="subtitle">
-    Towards Embodied Intelligence Across 
-    <span class="domain-emoji human">Humans 😐</span>, 
-    <span class="domain-emoji avatar">Avatars 🫥</span>, and 
-    <span class="domain-emoji robot">Humanoid Robotics 🤖</span>
-  </div>
-</div>
-
 <h2 id="about">About the Workshop</h2>
 
 <div class="row">

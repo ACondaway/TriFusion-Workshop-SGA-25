@@ -15,36 +15,35 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       {% unless site.title == "Workshop Title" or site.title == "" %}
-      <h1>{{site.title}}</h1>
+      <h1 class="text-center mt-2" style="margin-top:0.5em; font-size:2.5em; color:#fff;">{{site.title}}<h1>
       {% endunless %}
-      <h2>{{page.venue}}</h2>
+      <h2 class="subtitle">
+        Towards Embodied Intelligence Across 
+        <span class="domain-emoji human" style="font-size: 1em;">Humans😐</span>, 
+        <span class="domain-emoji avatar" style="font-size: 1em;">Avatars🫥</span>, and 
+        <span class="domain-emoji robot" style="font-size: 1em;">Humanoid Robotics🤖</span>
+      <h2>
+      <!-- <h2>{{page.venue}}</h2> -->
       <div class="row">
-        <div class="col-md-6">
-          {% if online == "true_public" %}
-          <p>Online (<a href="{{page.address}}">link</a>)</p>
-          {% elsif online == "true_private" %}
-          <p>Online</p>
-          {% endif %}
-          <p>{{page.humandate}}</p>
-          <p>{% if page.humantime %}{{page.humantime}}{% endif %}</p>
+        <div class="scheduled time" style="color: #fff; font-size: 0.7em; text-align: center;">
+          Dec 8, 2025
         </div>
-        <div class="col-md-6">
-          <p>
-          <strong>Organizers:</strong>
-          {% if page.organizers %}
-          {{page.organizers | join: ', ' %}}
-          {% else %}
-          to be announced.
-          {% endif %}
-          </p>
-          {% if page.student_leaders %}
-          <p>
-          <strong>Student Leaders:</strong>
-          {{page.student_leaders | join: ', ' %}}
-          </p>
-          {% endif %}
+        <div class="location" style="color: #fff; font-size: 0.7em; text-align: center; margin-bottom: 4em;">
+          Hong Kong, China
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+.jumbotron {
+  background-image: url('./assets/img/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+}
+.workshop-title {
+  color: #fff;
+}
+</style>
